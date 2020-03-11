@@ -29,11 +29,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kt-yC-GvN">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type your name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kt-yC-GvN">
                                 <rect key="frame" x="100" y="197" width="233" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbw-6K-JSz"/>
+                                    <action selector="txtNameDidBeginEditing:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="hqG-aW-eZF"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KM4-bI-rzd">
                                 <rect key="frame" x="0.0" y="73" width="375" height="21"/>
@@ -47,7 +51,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
-                                    <action selector="btnSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4xd-et-hSM"/>
+                                    <action selector="btnSendTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ox-2k-bkZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,6 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnSend" destination="tUM-HG-K2v" id="6ax-7Z-ayB"/>
                         <outlet property="lblHello" destination="KM4-bI-rzd" id="jR5-dA-nK9"/>
                         <outlet property="txtName" destination="1kt-yC-GvN" id="gGZ-ih-tSg"/>
                     </connections>
